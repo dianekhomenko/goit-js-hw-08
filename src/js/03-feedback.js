@@ -35,8 +35,6 @@ form.addEventListener('submit', onSubmit);
 function onSubmit(e) {
   e.preventDefault();
   console.log(parsedData);
-  form.elements.email.value = '';
-  form.elements.message.value = '';
-
+  e.currentTarget.reset()
   localStorage.clear();
 }
